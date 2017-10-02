@@ -1,0 +1,22 @@
+#+TITLE: Beautiful Soup Introduction
+
+* Introduction
+  This is a basic introduction to using [[https://www.crummy.com/software/BeautifulSoup/][Beautiful Soup]] to extract text from web pages.
+* Imports
+
+#+BEGIN_SRC ipython :session beautiful :results none
+# pypi
+import requests
+from bs4 import BeautifulSoup
+#+END_SRC
+
+* Loading the Page
+
+#+BEGIN_SRC ipython :session beautiful :results output
+response = requests.get("http://www.pythonscraping.com/pages/page1.html")
+soup = BeautifulSoup(response.text)
+print(soup.h1)
+#+END_SRC
+
+#+RESULTS:
+: <h1>An Interesting Title</h1>
