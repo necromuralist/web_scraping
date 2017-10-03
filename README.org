@@ -1,0 +1,3 @@
+#+TITLE: Web-Scraping
+
+These are my notes as I experiment with web-scraping. The built version is on [[https://necromuralist.github.io/web_scraping/][github]].
