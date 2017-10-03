@@ -1,0 +1,88 @@
+bs4\.element\.Tag
+=================
+
+.. currentmodule:: bs4.element
+
+.. autoclass:: Tag
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Tag.__init__
+      ~Tag.append
+      ~Tag.childGenerator
+      ~Tag.clear
+      ~Tag.decode
+      ~Tag.decode_contents
+      ~Tag.decompose
+      ~Tag.encode
+      ~Tag.encode_contents
+      ~Tag.extract
+      ~Tag.fetchNextSiblings
+      ~Tag.fetchParents
+      ~Tag.fetchPrevious
+      ~Tag.fetchPreviousSiblings
+      ~Tag.find
+      ~Tag.findAll
+      ~Tag.findAllNext
+      ~Tag.findAllPrevious
+      ~Tag.findChild
+      ~Tag.findChildren
+      ~Tag.findNext
+      ~Tag.findNextSibling
+      ~Tag.findNextSiblings
+      ~Tag.findParent
+      ~Tag.findParents
+      ~Tag.findPrevious
+      ~Tag.findPreviousSibling
+      ~Tag.findPreviousSiblings
+      ~Tag.find_all
+      ~Tag.find_all_next
+      ~Tag.find_all_previous
+      ~Tag.find_next
+      ~Tag.find_next_sibling
+      ~Tag.find_next_siblings
+      ~Tag.find_parent
+      ~Tag.find_parents
+      ~Tag.find_previous
+      ~Tag.find_previous_sibling
+      ~Tag.find_previous_siblings
+      ~Tag.format_string
+      ~Tag.get
+      ~Tag.getText
+      ~Tag.get_attribute_list
+      ~Tag.get_text
+      ~Tag.has_attr
+      ~Tag.has_key
+      ~Tag.index
+      ~Tag.insert
+      ~Tag.insert_after
+      ~Tag.insert_before
+      ~Tag.nextGenerator
+      ~Tag.nextSiblingGenerator
+      ~Tag.parentGenerator
+      ~Tag.prettify
+      ~Tag.previousGenerator
+      ~Tag.previousSiblingGenerator
+      ~Tag.recursiveChildGenerator
+      ~Tag.renderContents
+      ~Tag.replaceWith
+      ~Tag.replaceWithChildren
+      ~Tag.replace_with
+      ~Tag.replace_with_children
+      ~Tag.select
+      ~Tag.select_one
+      ~Tag.setup
+      ~Tag.unwrap
+      ~Tag.wrap
+   
+   
+
+   
+   
+   
