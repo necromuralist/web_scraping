@@ -1,0 +1,52 @@
+#+TITLE: The Quickstart Example
+
+* Imports
+
+#+BEGIN_SRC ipython :session quickstart :results none
+# python standard library
+import random
+
+# pypi
+import numpy
+from bokeh.plotting import (
+    figure,
+    output_file,
+    show,
+)
+#+END_SRC
+
+* Data
+
+  Some synthetic data to plot.
+
+#+BEGIN_SRC ipython :session quickstart :results none
+x_data = list(range(10))
+y_data = numpy.random.randint(0, 100, 10)
+#+END_SRC
+
+* Output
+  This saves the plot to an HTML file.
+
+#+BEGIN_SRC ipython :session quickstart :results none
+output_file("quickstart.html")
+#+END_SRC
+
+* The Plot
+  This creates the figure.
+
+#+BEGIN_SRC ipython :session quickstart :results none
+plot = figure(title="Quick Start", x_axis_label="X-Data", y_axis_label="Y-Data")
+#+END_SRC
+
+* Add The Data to the Plot
+  This adds the data to the figure as a line.
+
+#+BEGIN_SRC ipython :session quickstart :results none
+plot.line(x_data, y_data, legend="data")
+#+END_SRC
+
+* Show the Plot
+  This opens the plot in a browser.
+#+BEGIN_SRC ipython :session quickstart :results none
+show(plot)
+#+END_SRC

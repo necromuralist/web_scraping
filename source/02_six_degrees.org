@@ -1,0 +1,48 @@
+#+TITLE: Six-Degrees
+
+* Introduction
+  This is a basic introduction to making a web-crawler. It will start from a given [[https://en.wikipedia.org/wiki/Main_Page][wikipedia]] page and randomly pick pages to go to (up to six).
+
+* Imports
+
+#+BEGIN_SRC ipython :session sixdegrees :results none
+# python standard library
+from urllib.parse import urljoin
+
+# pypi
+from bs4 import BeautifulSoup
+import requests
+#+END_SRC
+
+* The URLs
+
+  The format for wikipedia URLs is the base URL ("https://en.wikipedia.org/wiki/") followed by the subject. If there are multiple words in the subject they are separated by underscores, e.g. "https://en.wikipedia.org/wiki/Ophiocordyceps_unilateralis". It will automatically set the first letter of the first word of the subject to a capital letter, but not the second word. So if it is a proper name it's case sensitive, but in some cases it isn't. In this case I'm going to start at the 'Behavior-altering_parasite_or_parasitoid' page, which isn't case-sensitive, but does have a dash in the first word.
+
+#+BEGIN_SRC ipython :session sixdegrees :results none
+WIKI_URL = "https://en.wikipedia.org/wiki/"
+BASE_PAGE = 'Behavior-altering_parasite_or_parasitoid'
+#+END_SRC
+
+* A getter
+
+  This is a function to get the page. It checks for errors and raises an error if there was one.
+
+#+BEGIN_SRC ipython :session sixdegrees :results none
+def get_page(page):
+    """Gets the page
+    
+    Args:
+     page (str): name of page (not the full URL)
+    
+    Returns:
+     BeautifulSoup: the loaded page
+
+    Raises:
+     RuntimeError: the page wasn't successfully loaded
+    """
+    url = urljoin(WIKI_URL, page)
+    response = requests.get(url)
+    if not response.ok:
+        raise RuntimeError("Unable to get {}".format(url))
+    return BeautifulSoup(response.text)
+#+END_SRC
